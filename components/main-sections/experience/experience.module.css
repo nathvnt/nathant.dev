@@ -1,0 +1,70 @@
+/* experience component styles */
+
+.cardWrapper {
+    @apply lg:!w-[75%] !w-[90%] !mx-auto !flex !flex-col lg:!flex-row text-white rounded-md border-emerald-600 border-2 mb-10 bg-transparent;
+}
+
+.cardLeft {
+    @apply flex flex-col py-4 lg:py-8 lg:w-[50%] lg:rounded-l-md border-emerald-600 lg:border-r-2 bg-slate-300 bg-opacity-20;
+}
+
+.cardLeft h2 {
+    @apply lg:p-2 lg:mt-4 text-2xl lg:text-3xl;
+}
+
+.cardLeft h3 {
+    @apply p-2 lg:my-4 text-xl lg:text-2xl;
+}
+
+.cardImage {
+    @apply relative mx-auto lg:p-4 mb-4 w-[90%] lg:w-[90%] h-auto;
+}
+
+.cardRight {
+    @apply flex flex-col py-4 lg:w-[50%] lg:rounded-r-md text-white bg-emerald-600;
+}
+
+.descriptionTitle {
+    @apply text-xl text-center p-2 lg:mt-4 underline decoration-emerald-600 underline-offset-4;
+}
+
+.roleDescription {
+    @apply w-[95%] lg:w-[85%] mx-auto my-2;
+}
+
+.techTitle {
+    @apply text-xl text-center p-2 mt-2 underline decoration-emerald-600 underline-offset-4;
+}
+
+.techiconContainer {
+    @apply w-[95%] mx-auto flex justify-center text-4xl xl:text-6xl; 
+}
+.techiconWrap {
+    @apply flex flex-col items-center;
+}
+
+.techiconWrap p {
+    @apply text-sm mt-2;
+}
+
+
+/* .customcardSlider {
+    @apply bg-transparent bg-opacity-0;
+} */
+
+
+.customcardSlider :global(.slick-slide) {
+    background: transparent !important;
+}
+
+.dark .customcardSlider :global(.slick-slide) {
+    background-color: rgba(15, 23, 42, 0.85) !important; /* Adjust color for dark mode */
+}
+
+.customcardSlider :global(.slick-track) {
+    background: transparent !important;
+}
+
+.dark .customcardSlider :global(.slick-track) {
+    background-color: rgba(15, 23, 42, 0.85) !important;
+}

@@ -1,0 +1,89 @@
+// Star generation function and variables
+@function generateStars($n) { 
+    $value: '#{0} #{random(2000)}px #{random(2000)}px #FFF';
+    @for $i from 2 through $n {
+      $value: '#{$value}, #{random(2000)}px #{random(2000)}px #FFF';
+    }
+    @return unquote($value);
+  }
+  
+  $stars-small: generateStars(700);
+  $stars-medium: generateStars(200);
+  $stars-big: generateStars(100);
+  
+  
+  #stars,
+  #stars2,
+  #stars3 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: transparent;
+    pointer-events: none;
+  }
+  
+  #stars {
+    width: 1px;
+    height: 1px;
+    background: transparent;
+    box-shadow: $stars-small;
+    animation: animateStars 28.5s ease-in-out infinite;
+  }
+  
+  #stars2 {
+    width: 2px;
+    height: 2px;
+    background: transparent;
+    box-shadow: $stars-medium;
+    animation: animateStars 30s ease-in-out infinite;
+  }
+  
+  #stars3 {
+    width: 3px;
+    height: 3px;
+    background: transparent;
+    box-shadow: $stars-big;
+    animation: animateStars 31.5s ease-in-out infinite;
+  }
+  
+  #stars::after, #stars2::after, #stars3::after {
+    content: " ";
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: transparent;
+    border-radius: 50%;
+  }
+  
+  #stars::after {
+    width: 1px;
+    height: 1px;
+    box-shadow: $stars-small;
+  }
+  
+  #stars2::after {
+    width: 2px;
+    height: 2px;
+    box-shadow: $stars-medium;
+  }
+  
+  #stars3::after {
+    width: 3px;
+    height: 3px;
+    box-shadow: $stars-big;
+  }
+  
+  // Keyframes for star rotation
+  @keyframes animateStars {
+    0% { transform: rotate3d(-1, 1, 0, 0deg); }
+    25% { transform: rotate3d(-1, 1, 0, 30deg); }
+    50% { transform: rotate3d(-1, 1, 0, 0deg); }
+    75% { transform: rotate3d(-1, 1, 0, -30deg); }
+    100% { transform: rotate3d(-1, 1, 0, 0deg); }
+  }
+  

@@ -1,0 +1,42 @@
+/* styles for skills component */
+
+.skillslideItem {
+  @apply lg:!w-[80%] !w-[100%] !mx-auto flex flex-col py-4 text-white bg-slate-300 bg-opacity-20 rounded-md border-emerald-600 border-2;
+}
+  
+.skillslideTitle {
+  @apply text-base lg:text-2xl text-center underline decoration-emerald-600 underline-offset-4 mt-1 lg:mt-10;
+}
+
+.skilliconContainer {
+  @apply w-[95%] mx-auto flex flex-wrap gap-4 lg:gap-10 xl:gap-24 justify-center text-3xl lg:text-4xl xl:text-7xl mt-4 mb-2 lg:mt-10 lg:mb-10;
+}
+
+.skilliconWrap {
+  @apply flex flex-col items-center;
+}
+
+.skilliconWrap p {
+  @apply text-xs lg:text-base mt-2;
+}
+
+.customSlider :global(.slick-slide) {
+  opacity: 0.4;
+  transform: scale(0.9);
+  transition: transform 0.5s, opacity 0.5s;
+}
+
+.customSlider :global(.slick-center) {
+  opacity: 1;
+  transform: scale(1);
+}
+
+@media (max-width: 550px) {
+  .customSlider :global(.slick-slide) {
+    transform: scale(0.85);
+  }
+  .customSlider :global(.slick-center) {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
