@@ -24,6 +24,16 @@ body {
   font-family: 'Share Tech Mono', Arial, Helvetica, sans-serif;
 }
 
+.page-content {
+  opacity: 0;
+  transition: opacity 1s ease-in;
+}
+
+.page-content.fade-in {
+  opacity: 1;
+}
+
+
 /* sticky navigation bar buttons */
 .nav-item {
   @apply bg-slate-300 bg-opacity-20 hover:bg-emerald-600 border-emerald-600 border-y-2 text-base shadow-md text-white;

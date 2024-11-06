@@ -25,7 +25,7 @@ export default function EmailCopy() {
       >
         <div className="flex items-center gap-2 cursor-pointer">
           <MdEmail className="mt-1" />
-          <h2>nathan@ipflux.io</h2>
+          <h2>---------------</h2>
         </div>
         
         {/* Tooltip */}
