@@ -18,7 +18,7 @@ function SampleNextArrow(props) {
     const { onClick } = props;
     return (
         <div
-            className="absolute right-0 lg:right-0 top-[70%] lg:top-[60%] z-10 cursor-pointer text-2xl lg:text-6xl text-emerald-600 hover:text-emerald-800 transform -translate-y-1/2"
+            className="absolute right-0 lg:right-0 top-[70%] lg:top-[60%] z-10 cursor-pointer text-3xl lg:text-6xl text-emerald-600 hover:text-emerald-800 transform -translate-y-1/2"
             onClick={onClick}
         >
             <IoIosArrowDown />
@@ -30,7 +30,7 @@ function SamplePrevArrow(props) {
     const { onClick } = props;
     return (
         <div
-            className="absolute right-0 lg:right-0 top-[30%] lg:top-[40%] z-10 cursor-pointer text-2xl lg:text-6xl text-emerald-600 hover:text-emerald-800 transform -translate-y-1/2"
+            className="absolute right-0 lg:right-0 top-[30%] lg:top-[40%] z-10 cursor-pointer text-3xl lg:text-6xl text-emerald-600 hover:text-emerald-800 transform -translate-y-1/2"
             onClick={onClick}
         >
             <IoIosArrowUp />
@@ -38,7 +38,7 @@ function SamplePrevArrow(props) {
     );
 }
 
-export default function Skills() {
+export default function Skills({ darkMode }) {
     const sliderRef = useRef(null);
 
     const handleWheel = (event) => {
@@ -76,7 +76,7 @@ export default function Skills() {
     };
 
     return (
-        <div className="text-center mb-28 lg:mb-20 w-[95%] lg:w-[80%] mx-auto">
+        <div className="text-center mb-20 w-[95%] lg:w-[80%] mx-auto">
 
             <h2 className="text-2xl lg:text-3xl py-2 mb-10">
                 Technical <span className="text-emerald-600">Skills</span>
@@ -85,7 +85,7 @@ export default function Skills() {
             <Slider {...settings} ref={sliderRef} className={styles.customSlider}>
 
                 {/* Skills card: Programming & Scripting Languages */}
-                <div className={styles.skillslideItem}>
+                <div className={`${styles.skillslideItem} ${darkMode ? 'dark:bg-black dark:bg-opacity-65' : 'bg-slate-300 bg-opacity-15'}`}>
                     <h3 className={styles.skillslideTitle}>
                         Programming & Scripting Languages
                     </h3>
@@ -114,7 +114,7 @@ export default function Skills() {
                 </div>
 
                 {/* Frameworks & Libraries */}
-                <div className={styles.skillslideItem}>
+                <div className={`${styles.skillslideItem} ${darkMode ? 'dark:bg-black dark:bg-opacity-65' : 'bg-slate-300 bg-opacity-15'}`}>
                     <h3 className={styles.skillslideTitle}>
                         Frameworks & Libraries
                     </h3>
@@ -143,7 +143,7 @@ export default function Skills() {
                 </div>
 
                 {/* DevOps & Cloud Services */}
-                <div className={styles.skillslideItem}>
+                <div className={`${styles.skillslideItem} ${darkMode ? 'dark:bg-black dark:bg-opacity-65' : 'bg-slate-300 bg-opacity-15'}`}>
                     <h3 className={styles.skillslideTitle}>
                         DevOps & Cloud Services
                     </h3>
@@ -172,7 +172,7 @@ export default function Skills() {
                 </div>
 
                 {/* Security & System Administration */}
-                <div className={styles.skillslideItem}>
+                <div className={`${styles.skillslideItem} ${darkMode ? 'dark:bg-black dark:bg-opacity-65' : 'bg-slate-300 bg-opacity-15'}`}>
                     <h3 className={styles.skillslideTitle}>
                         Security & System Administration
                     </h3>

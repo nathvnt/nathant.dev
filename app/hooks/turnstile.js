@@ -7,7 +7,7 @@ export default function useTurnstile() {
 
   useEffect(() => {
     const script = document.createElement("script");
-    script.src = "https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit&no_cache=" + new Date().getTime();
+    script.src = "https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit";
     script.async = true;
     script.onload = () => {
       window.turnstile.render("#turnstile-container", {

@@ -1,7 +1,7 @@
 /* styles for skills component */
 
 .skillslideItem {
-  @apply lg:!w-[80%] !w-[100%] !mx-auto flex flex-col py-4 text-white bg-slate-300 bg-opacity-20 rounded-md border-emerald-600 border-2;
+  @apply lg:!w-[80%] !w-[100%] !mx-auto flex flex-col py-4 text-white rounded-md border-emerald-600 border-2;
 }
   
 .skillslideTitle {

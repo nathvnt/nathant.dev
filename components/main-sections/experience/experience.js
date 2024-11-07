@@ -15,7 +15,7 @@ function SampleNextArrow(props) {
     const { onClick } = props;
     return (
         <div
-            className="absolute top-1/2 right-0 lg:right-20 transform -translate-y-1/2 z-10 cursor-pointer text-xl lg:text-6xl text-emerald-600 hover:text-emerald-800"
+            className="absolute top-1/2 right-0 lg:right-20 transform -translate-y-1/2 z-10 cursor-pointer text-3xl lg:text-6xl text-emerald-600 hover:text-emerald-800"
             onClick={onClick}
         >
             <IoIosArrowForward />
@@ -27,7 +27,7 @@ function SamplePrevArrow(props) {
     const { onClick } = props;
     return (
         <div
-            className="absolute top-1/2 left-0 lg:left-20 transform -translate-y-1/2 z-10 cursor-pointer text-xl lg:text-6xl text-emerald-600 hover:text-emerald-800"
+            className="absolute top-1/2 left-0 lg:left-20 transform -translate-y-1/2 z-10 cursor-pointer text-3xl lg:text-6xl text-emerald-600 hover:text-emerald-800"
             onClick={onClick}
         >
             <IoIosArrowBack />
@@ -83,7 +83,7 @@ export default function Experience({ darkMode }) {
                 {/* Experience card */}
                 <div className={styles.cardWrapper}>
                     {/* First half of card */}
-                    <div className={styles.cardLeft}>
+                    <div className={`${styles.cardLeft} ${darkMode ? 'dark:bg-black dark:bg-opacity-65' : 'bg-slate-300 bg-opacity-15'}`}>
                         <h2>DataSeal Privacy</h2>
                         <h3>Software Engineer</h3>
                         <div className={styles.cardImage}>
@@ -116,7 +116,7 @@ export default function Experience({ darkMode }) {
                                 <p>Node.js</p>
                             </div>
                         </div>
-                        <div className={`${styles.techiconContainer} gap-6 lg:gap-10 xl:gap-16 mt-6 lg:mt-12`}>
+                        <div className={`${styles.techiconContainer} gap-10 lg:gap-10 xl:gap-16 mt-2 lg:mt-12`}>
                             <div className={styles.techiconWrap}>
                                 <SiAmazonwebservices />
                                 <p>AWS</p>
@@ -140,7 +140,7 @@ export default function Experience({ darkMode }) {
                 {/* Second experience card */}
                 <div className={styles.cardWrapper}>
                     {/* First half of card */}
-                    <div className={styles.cardLeft}>
+                    <div className={`${styles.cardLeft} ${darkMode ? 'dark:bg-black dark:bg-opacity-65' : 'bg-slate-300 bg-opacity-15'}`}>
                         <h2>CrawlBee</h2>
                         <h3>Software Engineer</h3>
                         <div className={styles.cardImage}>
@@ -169,7 +169,7 @@ export default function Experience({ darkMode }) {
                                 <p>Tailwind CSS</p>
                             </div>
                         </div>
-                        <div className={`${styles.techiconContainer} gap-12 lg:gap-16 xl:gap-24 mt-6 lg:mt-12`}>
+                        <div className={`${styles.techiconContainer} gap-16 lg:gap-16 xl:gap-24 mt-2 lg:mt-12`}>
                             <div className={styles.techiconWrap}>
                                 <FaPhp />
                                 <p>PHP</p>
@@ -189,7 +189,7 @@ export default function Experience({ darkMode }) {
                 {/* Third experience card */}
                 <div className={styles.cardWrapper}>
                     {/* First half of card */}
-                    <div className={styles.cardLeft}>
+                    <div className={`${styles.cardLeft} ${darkMode ? 'dark:bg-black dark:bg-opacity-65' : 'bg-slate-300 bg-opacity-15'}`}>
                         <h2>The Adaptive</h2>
                         <h3>Python Developer</h3>
                         <div className={styles.cardImage}>
@@ -218,7 +218,7 @@ export default function Experience({ darkMode }) {
                                 <p>Selenium</p>
                             </div>
                         </div>
-                        <div className={`${styles.techiconContainer} gap-12 lg:gap-16 xl:gap-24 mt-6 lg:mt-12`}>
+                        <div className={`${styles.techiconContainer} gap-16 lg:gap-16 xl:gap-24 mt-2 lg:mt-12`}>
                             <div className={styles.techiconWrap}>
                                 <BsFiletypeJson />
                                 <p>JSON</p>

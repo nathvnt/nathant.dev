@@ -142,7 +142,7 @@ const PasswordEntropyCalculator = () => {
   };
 
   return (
-    <div className="w-[90%] lg:w-[50%] flex flex-col mx-auto p-2 my-6 rounded-md bg-black bg-opacity-85 border-2 border-emerald-600 text-black">
+    <div className="w-[90%] lg:w-[50%] flex flex-col mx-auto p-2 my-6 rounded-md bg-black bg-opacity-65 dark:bg-slate-300 dark:bg-opacity-15 border-2 border-emerald-600 text-black">
 
       <h2 className='text-emerald-600 text-center p-1 my-2 text-lg lg:text-2xl'>Password Entropy Calculator</h2>
       <p className='text-white text-center text-sm lg:text-lg p-1 lg:w-[70%] mx-auto mt-2 mb-6'>

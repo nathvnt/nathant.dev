@@ -1,0 +1,31 @@
+/* for horizontal line effect in loadinganimation.js */
+
+.horizontalLineAnimation {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: #fff;
+  z-index: 20;
+  transform: translate(-50%, -50%);
+  animation: expandLine 1s forwards ease, glow 1s infinite alternate;
+}
+
+@keyframes expandLine {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100vw;
+  }
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.5), 0 0 15px rgba(255, 255, 255, 0.3);
+  }
+  to {
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.5);
+  }
+}

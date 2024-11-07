@@ -1,3 +1,4 @@
+import styles from './animations.module.css';
 import { useEffect, useRef, useState } from 'react';
 
 const LoadingAnimation = ({ onFinish }) => {
@@ -95,20 +96,7 @@ const LoadingAnimation = ({ onFinish }) => {
 
       {/* Horizontal line animation with glow effect */}
       {lineAnimation && (
-        <div
-          className="horizontal-line"
-          style={{
-            position: 'fixed',
-            top: '50%',
-            left: '50%',
-            width: '0',
-            height: '2px',
-            backgroundColor: '#fff',
-            zIndex: 20,
-            transform: 'translate(-50%, -50%)',
-            animation: 'expandLine 1s forwards ease, glow 1s infinite alternate',
-          }}
-        />
+        <div className={styles.horizontalLineAnimation} />
       )}
     </>
   );

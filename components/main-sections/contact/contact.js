@@ -83,14 +83,14 @@ export default function Contact() {
     };
 
     return (
-        <div className="text-center mb-32">
+        <div className="text-center mb-20">
             
             <h2 className="text-2xl lg:text-3xl py-2">
                 Feel free to <span className="text-emerald-600">contact</span> me!
             </h2>
 
             <form onSubmit={handleSubmit}>
-                <div className="w-[90%] lg:w-[40%] flex flex-col mx-auto p-2 my-6 rounded-md bg-black bg-opacity-85 border-2 border-emerald-600 text-black">
+                <div className="w-[90%] lg:w-[40%] flex flex-col mx-auto p-2 my-6 rounded-md bg-black bg-opacity-65 dark:bg-slate-300 dark:bg-opacity-15 border-2 border-emerald-600 text-black">
 
                     {/* Name Field */}
                     <label htmlFor="name" className="text-lg text-emerald-600 text-left p-1 ml-[5%] mt-4">

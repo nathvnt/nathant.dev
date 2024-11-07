@@ -20,7 +20,7 @@ import Portfolio from "@/components/main-sections/portfolio/portfolio";
 import Contact from "@/components/main-sections/contact/contact";
 
 export default function Home() {
-  //useState variables
+  // useState variables
   const isVerified = useTurnstile();
   const [showContent, setShowContent] = useState(false); 
   const [showTypewriter, setShowTypewriter] = useState(false);
@@ -35,7 +35,7 @@ export default function Home() {
   const portfolioRef = useRef(null);
   const contactRef = useRef(null);
 
-  //manually force page content to fade-in after loading animation
+  // manually force page content to fade-in after loading animation
   useEffect(() => {
     if (showContent) {
       const fadeInTimeout = setTimeout(() => {
@@ -72,7 +72,7 @@ export default function Home() {
   return (
     <div className={darkMode ? "dark" : ""}>
 
-      {/* turnstile widget*/}
+      {/* cloudflare turnstile widget*/}
       {!isVerified && (
         <div id="turnstile-container" style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "100vh" }}></div>
       )}
@@ -91,14 +91,14 @@ export default function Home() {
             transition: "opacity 1s ease-in",
           }}
         >
-          <main className="bg-black bg-opacity-20 text-white">
+          <main className="text-white">
 
             {/* ---banner title bar--- */}
-            <div ref={bannerRef} id="banner" className="bg-black py-4 mb-6 flex justify-between border-b-2 border-black">
-              <h1 className="text-2xl lg:text-3xl px-4">Nathaniel Rodgers</h1>
+            <div ref={bannerRef} id="banner" className=" bg-black dark:bg-emerald-600 dark:bg-opacity-30 py-8 flex justify-between border-b-2 border-black">
+              <h1 className="text-2xl lg:text-3xl px-4 ">Nathaniel Rodgers</h1>
               <ul className="flex items-center px-6">
                 <li>
-                  <BsFillMoonStarsFill onClick={() => setDarkMode(!darkMode)} className="cursor-pointer text-2xl" />
+                  <BsFillMoonStarsFill onClick={() => setDarkMode(!darkMode)} className="cursor-pointer text-2xl dark:text-black" />
                 </li>
               </ul>
             </div>
@@ -113,35 +113,38 @@ export default function Home() {
               portfolioRef={portfolioRef}
               contactRef={contactRef}
             />
-
+          
             {/* ---intro section--- */}
-            <section id="banner" className="min-h-screen border-b-2 border-black bg-slate-300 bg-opacity-20">
+            <section id="banner" className="min-h-screen border-b-2 border-black bg-emerald-600 dark:bg-black bg-opacity-30">
+              <div className="lg:pt-20 pt-16"></div>
+              {/* fill space while greeting is loading */}
               {!showTypewriter && <div className="py-12 min-h-[11rem]"></div>}
               {showTypewriter && <Greeting />}
+
               <HomeImage />
-              <h2 className="w-[80%] lg:w-[40%] mx-auto mt-16 text-center text-xl">
+              <h2 className="w-[80%] lg:w-[40%] mx-auto my-16 text-center text-xl">
                 I am always looking to craft elegant, creative, and security-focused solutions that solve complex real-world problems.
               </h2>
               {/* <EmailCopy /> */}
             </section>
 
             {/* ---experience section--- */}
-            <section ref={experienceRef} id="experience" className="section-container bg-black">
+            <section ref={experienceRef} id="experience" className="section-container dark:bg-emerald-600 bg-black dark:bg-opacity-30">
               <Experience darkMode={darkMode} />
             </section>
 
             {/* ---portfolio section--- */}
-            <section ref={portfolioRef} id="portfolio" className="section-container bg-slate-300 bg-opacity-20">
+            <section ref={portfolioRef} id="portfolio" className="section-container bg-emerald-600 dark:bg-black bg-opacity-30">
               <Portfolio />
             </section>
 
             {/* ---skills section--- */}
-            <section ref={skillsRef} id="skills" className="section-container bg-black">
+            <section ref={skillsRef} id="skills" className="section-container dark:bg-emerald-600 bg-black dark:bg-opacity-30">
               <Skills darkMode={darkMode} />
             </section>
 
             {/* ---contact section--- */}
-            <section ref={contactRef} id="contact" className="section-container bg-slate-300 bg-opacity-20">
+            <section ref={contactRef} id="contact" className="section-container bg-emerald-600 dark:bg-black bg-opacity-30">
               <Contact />
             </section>
 
