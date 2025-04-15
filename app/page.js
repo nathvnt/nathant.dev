@@ -1,9 +1,6 @@
 "use client"; // This is a client component
 import { useState, useEffect, useRef } from "react";
 
-//import icons
-import { BsFillMoonStarsFill } from "react-icons/bs";
-
 //import hooks & helper functions
 import useTurnstile from "./hooks/turnstile";
 import { scrollToSection, setupIntersectionObserver } from "./helpers/navigationHelpers";
@@ -15,7 +12,6 @@ import StickyNav from "@/components/main-sections/intro/stickynav";
 import Greeting from "@/components/main-sections/intro/greeting";
 // import EmailCopy from "@/components/main-sections/intro/copyemail";
 import Skills from "@/components/main-sections/skills/skills";
-import Experience from "@/components/main-sections/experience/experience";
 import Portfolio from "@/components/main-sections/portfolio/portfolio";
 import Contact from "@/components/main-sections/contact/contact";
 
@@ -94,13 +90,13 @@ export default function Home() {
           <main className="text-white">
 
             {/* ---banner title bar--- */}
-            <div ref={bannerRef} id="banner" className=" bg-black dark:bg-emerald-600 dark:bg-opacity-30 py-8 flex justify-between border-b-2 border-black">
+            <div ref={bannerRef} id="banner" className=" bg-emerald-600 dark:bg-black bg-opacity-30 py-8 flex justify-between border-b-2 border-black">
               <h1 className="text-2xl lg:text-3xl px-4 ">Nathaniel Rodgers</h1>
-              <ul className="flex items-center px-6">
+              {/* <ul className="flex items-center px-6">
                 <li>
                   <BsFillMoonStarsFill onClick={() => setDarkMode(!darkMode)} className="cursor-pointer text-2xl dark:text-black" />
                 </li>
-              </ul>
+              </ul> */}
             </div>
 
             {/* ---sticky autoscroll navigation bar component-- */}
@@ -115,7 +111,7 @@ export default function Home() {
             />
           
             {/* ---intro section--- */}
-            <section id="banner" className="min-h-screen border-b-2 border-black bg-emerald-600 dark:bg-black bg-opacity-30">
+            <section id="banner" className="min-h-screen border-b-2 border-black dark:bg-emerald-600 bg-black dark:bg-opacity-30">
               <div className="lg:pt-20 pt-16"></div>
               {/* fill space while greeting is loading */}
               {!showTypewriter && <div className="py-12 min-h-[11rem]"></div>}
@@ -126,11 +122,6 @@ export default function Home() {
                 I am always looking to craft elegant, creative, and security-focused solutions that solve complex real-world problems.
               </h2>
               {/* <EmailCopy /> */}
-            </section>
-
-            {/* ---experience section--- */}
-            <section ref={experienceRef} id="experience" className="section-container dark:bg-emerald-600 bg-black dark:bg-opacity-30">
-              <Experience darkMode={darkMode} />
             </section>
 
             {/* ---portfolio section--- */}

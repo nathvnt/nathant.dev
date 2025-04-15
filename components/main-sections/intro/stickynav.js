@@ -12,25 +12,21 @@ export default function StickyNav({ scrollToSection, activeSection, bannerRef, s
                 </li>
 
                 <li 
-                    className={`${styles.navItem} ${activeSection === "experience" ? "!bg-emerald-600" : ""}`}
-                    onClick={() => scrollToSection(experienceRef)}
-                >
-                    <a className={styles.navA}>Experience</a>
-                </li>
-                <li 
-                    className={`${styles.navItem} border-x-2 ${activeSection === "portfolio" ? "!bg-emerald-600" : ""}`}
+                    className={`${styles.navItem} ${activeSection === "portfolio" ? "!bg-emerald-600" : ""}`}
                     onClick={() => scrollToSection(portfolioRef)}
                 >
                     <a className={styles.navA}>Portfolio</a>
                 </li>
+
                 <li 
-                    className={`${styles.navItem} ${activeSection === "skills" ? "!bg-emerald-600" : ""}`}
+                    className={`${styles.navItem} border-x-2  ${activeSection === "skills" ? "!bg-emerald-600" : ""}`}
                     onClick={() => scrollToSection(skillsRef)}   
                 >
                     <a className={styles.navA}>Skills</a>
                 </li>
+                
                 <li 
-                    className={`${styles.navItem} border-x-2 rounded-r-md ${activeSection === "contact" ? "!bg-emerald-600" : ""}`}
+                    className={`${styles.navItem} border-r-2 rounded-r-md ${activeSection === "contact" ? "!bg-emerald-600" : ""}`}
                     onClick={() => scrollToSection(contactRef)}
                 >
                     <a className={styles.navA}>Contact</a>

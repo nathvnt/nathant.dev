@@ -142,49 +142,54 @@ const PasswordEntropyCalculator = () => {
   };
 
   return (
-    <div className="w-[90%] lg:w-[50%] flex flex-col mx-auto p-2 my-6 rounded-md bg-black bg-opacity-65 dark:bg-slate-300 dark:bg-opacity-15 border-2 border-emerald-600 text-black">
+<div className="w-[90%] flex flex-col mx-auto p-2 rounded-md bg-black bg-opacity-65 dark:bg-slate-300 dark:bg-opacity-15 border-2 border-emerald-600 text-black">
 
-      <h2 className='text-emerald-600 text-center p-1 my-2 text-lg lg:text-2xl'>Password Entropy Calculator</h2>
-      <p className='text-white text-center text-sm lg:text-lg p-1 lg:w-[70%] mx-auto mt-2 mb-6'>
-        Password entropy measures a passwords strength based on the number of attempts it would take to be guessed using brute-force methods. 
-        This works by calculating the uniqueness or randomness of a given set of characters, thus quantifying how unpredictable the password is. Higher entropy indicates 
-        a more complex password, which in return is exponentially harder to crack, making it one of the most reliable indicators of a passwords overall security.
-      </p>
-      
-      <label className="text-emerald-600 text-left text-sm lg:text-base p-1 ml-[2.5%] lg:ml-[12%] mt-2">Enter a password you would like to test</label>
-      <div className="relative w-[95%] mx-auto mb-6">
+  <h2 className='text-emerald-600 text-center p-1 my-2 text-lg lg:text-2xl'>Password Entropy Calculator</h2>
 
-        <input
-          type={showPassword ? 'text' : 'password'}
-          placeholder="Enter a password"
-          value={password}
-          className="p-1 w-full lg:w-[80%] rounded-md bg-white border border-gray-400 text-base outline-none focus:ring-2 focus:ring-emerald-600 shadow-md"
-          onChange={handleInputChange}
-        />
-        <span
-          className="absolute right-3 lg:right-28 top-2 cursor-pointer text-black"
-          onClick={() => setShowPassword(!showPassword)}
-        >
-          {showPassword ? <FaEyeSlash /> : <FaRegEye />}
-        </span>
+  <p className='text-white text-center text-sm lg:text-lg p-1 lg:w-[70%] mx-auto mt-2 mb-6'>
+    Password entropy measures a password's strength based on the number of attempts it would take to be guessed using brute-force methods. 
+    This works by calculating the uniqueness or randomness of a given set of characters, thus quantifying how unpredictable the password is. 
+    Higher entropy indicates a more complex password, making it exponentially harder to crack.
+  </p>
 
-      </div>
+  <label className="text-emerald-600 text-sm lg:text-base text-center mb-2">
+    Enter a password you would like to test
+  </label>
 
-      <div className='text-white p-1 mb-2 lg:text-lg'>
-        <p>Entropy: {entropy.toFixed(2)} bits</p>
-        <p>Estimated cracking time: {crackingTime}</p>
-      </div>
+  <div className="relative w-[95%] lg:w-[70%] mx-auto mb-6">
+    <input
+      type={showPassword ? 'text' : 'password'}
+      placeholder="Enter a password"
+      value={password}
+      className="p-1 w-full rounded-md bg-white border border-gray-400 text-base outline-none focus:ring-2 focus:ring-emerald-600 shadow-md"
+      onChange={handleInputChange}
+    />
+    <span
+      className="absolute right-3 top-2 cursor-pointer text-black"
+      onClick={() => setShowPassword(!showPassword)}
+    >
+      {showPassword ? <FaEyeSlash /> : <FaRegEye />}
+    </span>
+  </div>
 
-      <div className='lg:flex mb-10'>
-        <div className="mt-6 w-[95%] mx-auto lg:w-[60%] xl:w-[40%]">
-          <Line data={entropyData} options={entropyOptions} />
-        </div>
-        <div className="mt-6 w-[95%] mx-auto lg:w-[60%] xl:w-[40%]">
-          <Bar data={charData} options={charOptions} />
-        </div>
-      </div>
+  {/* Centered Entropy Output */}
+  <div className='text-white text-center p-1 mb-2 lg:text-lg lg:w-[70%] mx-auto'>
+    <p>Entropy: {entropy.toFixed(2)} bits</p>
+    <p>Estimated cracking time: {crackingTime}</p>
+  </div>
 
+  {/* Graphs */}
+  <div className='lg:flex mb-10 justify-center gap-6'>
+    <div className="mt-6 w-[95%] mx-auto lg:w-[60%] xl:w-[40%]">
+      <Line data={entropyData} options={entropyOptions} />
     </div>
+    <div className="mt-6 w-[95%] mx-auto lg:w-[60%] xl:w-[40%]">
+      <Bar data={charData} options={charOptions} />
+    </div>
+  </div>
+
+</div>
+
   );
 };
 
