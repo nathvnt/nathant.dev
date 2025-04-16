@@ -148,10 +148,10 @@ const PasswordEntropyCalculator = () => {
   return (
 <div className="w-[100%] flex flex-col mx-auto p-2 rounded-md bg-black bg-opacity-65 dark:bg-slate-300 dark:bg-opacity-15 border-2 border-emerald-600 text-black">
 
-  <h2 className='text-emerald-600 text-center p-1 my-2 text-lg lg:text-2xl'>Password Entropy Calculator</h2>
+  <h2 className="text-emerald-600 text-center p-1 my-2 text-lg lg:text-2xl">Password Entropy Calculator</h2>
 
-  <p className='text-white text-center text-[12px] lg:text-[16px] p-1 lg:w-[70%] mx-auto mt-2 mb-6'>
-    Password entropy measures a password's strength based on the number of attempts it would take to be guessed using brute-force methods. 
+  <p className="text-white text-center text-[12px] lg:text-[16px] p-1 lg:w-[70%] mx-auto mt-2 mb-6">
+    Password entropy measures password strength based on the number of attempts it would take to be guessed using brute-force methods. 
     This works by calculating the uniqueness or randomness of a given set of characters, thus quantifying how unpredictable the password is. 
     Higher entropy indicates a more complex password, making it exponentially harder to crack.
   </p>
@@ -176,13 +176,13 @@ const PasswordEntropyCalculator = () => {
     </span>
   </div>
 
-  <div className='text-white text-center p-1 mb-2 text-[14px] lg:text-[18px] font-semibold lg:w-[70%] mx-auto'>
+  <div className="text-white text-center p-1 mb-2 text-[14px] lg:text-[18px] font-semibold lg:w-[70%] mx-auto">
     <p>Entropy: {entropy.toFixed(2)} bits</p>
     <p>Estimated cracking time: {crackingTime}</p>
   </div>
 
   {/* Graphs */}
-  <div className='lg:flex mb-10 justify-center gap-6'>
+  <div className="lg:flex mb-10 justify-center gap-6">
     <div className="relative mt-6 w-[95%] mx-auto lg:w-[60%] xl:w-[40%]">
       <Line data={entropyData} options={entropyOptions} />
     </div>
