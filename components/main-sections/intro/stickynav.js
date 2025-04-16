@@ -26,7 +26,7 @@ export default function StickyNav({ scrollToSection, activeSection, bannerRef, s
                 </li>
                 
                 <li 
-                    className={`${styles.navItem} border-r-2 rounded-r-md ${activeSection === "contact" ? styles.activeNavItem : ""}`}
+                    className={`${styles.navItem} !border-r-2 !rounded-r-md !border-emerald-900 ${activeSection === "contact" ? styles.activeNavItem : ""}`}
                     onClick={() => scrollToSection(contactRef)}
                 >
                     <a className={styles.navA}>Contact</a>

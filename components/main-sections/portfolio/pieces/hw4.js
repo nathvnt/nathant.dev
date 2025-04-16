@@ -17,7 +17,7 @@ export default function Hw4() {
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="w-5 h-5 sm:w-6 sm:h-6 lg:w-8 lg:h-8"
+              className="w-6 h-6 lg:w-8 lg:h-8"
               fill="currentColor"
               viewBox="0 0 24 24"
             >

@@ -15,8 +15,8 @@ import "slick-carousel/slick/slick-theme.css";
 
 export default function Portfolio() {
   const projectNames = [
-    "ipflux.io", "HouseWarmth v4", "HouseWarmth v5", "DataSeal Privacy",
-     "MTGO Linux", "Spelltable Automation", "3x YouTube", "Password Entropy Calculator"
+    "ipflux.io", "HouseWarmth v4", "HouseWarmth v5", "MTGO Linux", 
+    "Spelltable Automation", "3x YouTube", "Password Entropy Calculator", "DataSeal Privacy"
   ];
   const [currentSlide, setCurrentSlide] = useState(0);
   let sliderRef = null;
@@ -38,7 +38,7 @@ export default function Portfolio() {
         My <span className="text-emerald-600">Portfolio</span>
       </h2>
 
-      <div className="w-full flex flex-col lg:flex-row sm:gap-0 lg:gap-8 sm:p-0 lg:p-8">
+      <div className="w-full flex flex-col lg:flex-row sm:gap-0 lg:gap-6 sm:p-0 lg:p-8">
 
         {/* desktop nav menu */}
         <div className="hidden lg:flex flex-col flex-shrink-0 w-[15%] pt-4">
@@ -76,37 +76,54 @@ export default function Portfolio() {
         </div>
 
         {/* mobile nav menu */}
-        <div className="flex sm:flex lg:hidden justify-center items-center gap-4 py-4">
-          <button
-            onClick={() => sliderRef?.slickPrev()}
-            className="text-white text-3xl hover:text-emerald-400"
-          >
-            ⦑
-          </button>
+        <div className="flex flex-col">
+          <div className="flex sm:flex lg:hidden justify-center items-center py-4 w-full">
+            <div className="flex justify-between items-center px-4 w-[95%]">
+              <button
+                onClick={() => sliderRef?.slickPrev()}
+                className="text-emerald-400 font-extrabold text-3xl text-left w-[5%]"
+              >
+                ⦑
+              </button>
 
-          <span className="text-lg font-semibold text-emerald-400 text-center">
-            {projectNames[currentSlide]}
-          </span>
+              <span className="text-[18px] font-semibold text-white text-center flex-1 w-[90%]">
+                {projectNames[currentSlide]}
+              </span>
 
-          <button
-            onClick={() => sliderRef?.slickNext()}
-            className="text-white text-3xl hover:text-emerald-400"
-          >
-            ⦒
-          </button>
+              <button
+                onClick={() => sliderRef?.slickNext()}
+                className="text-emerald-400 font-extrabold text-3xl text-right w-[5%]"
+              >
+                ⦒
+              </button>
+            </div>
+          </div>
+          {/* mobile nav dots */}
+          <div className="flex lg:hidden justify-center gap-2 pb-4">
+            {projectNames.map((_, index) => (
+              <span
+                key={index}
+                className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                  index === currentSlide
+                    ? "bg-emerald-400 scale-125"
+                    : "bg-gray-500 opacity-50"
+                }`}
+              />
+            ))}
+          </div>
         </div>
 
         {/* portfolio piece carousel */}
-        <div className="sm:w-full lg:basis-0 lg:flex-grow lg:max-w-[calc(100%-15%-3rem)] shadow-[0_4px_30px_rgba(0,0,0,0.85)] rounded-lg mx-2 mt-4 mb-8 lg:mb-4">
+        <div className="sm:w-full lg:basis-0 lg:flex-grow lg:max-w-[calc(100%-15%-4rem)] shadow-[0_4px_30px_rgba(0,0,0,0.85)] rounded-lg mx-2 mt-4 mb-8 lg:mb-4">
           <Slider ref={(ref) => (sliderRef = ref)} {...settings}>
             <div><Ipflux /></div>
             <div><Hw4 /></div>
             <div><Hw5 /></div>
-            <div><Dataseal /></div>
             <div><MTGOLinux /></div>
             <div><SpellTableAuto /></div>
             <div><ThreeXyt /></div>
             <div><PasswordEntropyCalculator /></div>
+            <div><Dataseal /></div>
           </Slider>
         </div>
       </div>

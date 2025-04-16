@@ -4,7 +4,7 @@
 }
 
 .navItem {
-  @apply lg:w-[21.25%] w-[22.5%] py-2 lg:py-4 bg-black bg-opacity-65 dark:bg-slate-300 dark:bg-opacity-15 border-emerald-900 border-y-2 shadow-md text-center;
+  @apply lg:w-[21.25%] w-[22.5%] py-2 lg:py-4 bg-black bg-opacity-65 border-emerald-900 border-y-2 shadow-md text-center;
 }
 
 .navItem:hover {

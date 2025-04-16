@@ -7,17 +7,6 @@ export default function Dataseal() {
           DataSeal is a project I worked on, employed as a full-stack software engineer. The goal of this project was to help ensure online privacy
           for customers by developing a suite of custom automated data collection and removal tools integrated into a client facing web application.
         </span>
-
-        <span className="text-[14px] lg:text-[18px] font-semibold">
-          Website: 
-          <a 
-            href="https://dataseal.io/" 
-            target="_blank"
-            className="underline text-blue-600 font-semibold ml-2"
-          >
-            https://dataseal.io/
-          </a>
-        </span>
       </div>
 
       <div className="w-[95%] mx-auto my-4"> 

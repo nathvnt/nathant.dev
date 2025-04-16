@@ -8,7 +8,7 @@ export default function MTGOLinux() {
     <div className="w-[100%] mx-auto text-[12px] lg:text-[16px] p-2 lg:p-6 rounded-md bg-black bg-opacity-65  border-2 border-emerald-600 ">
       <div className="sm:w-[95%] lg:w-[90%] mx-auto px-4 pb-4 flex flex-col gap-5">
         <span>
-          This is a bash script I made that automates configuring and installing a Wine designed to run game Magic The Gathering Online on Linux 
+          This is a bash script I made that automates configuring and installing a Wine environment designed to run the game Magic The Gathering Online on Linux 
           (traditionally only compatible with machines running Windows). After completing the initial install, the script can be used for 
           launching the game. I also created a desktop entry file for cleanly adding the game to the system task manager tray.      
         </span>
@@ -22,7 +22,7 @@ export default function MTGOLinux() {
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="w-5 h-5 sm:w-6 sm:h-6 lg:w-8 lg:h-8"
+              cclassName="w-6 h-6 lg:w-8 lg:h-8"
               fill="currentColor"
               viewBox="0 0 24 24"
             >

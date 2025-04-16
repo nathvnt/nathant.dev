@@ -111,7 +111,7 @@ export default function Home() {
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      className="w-8 h-8 lg:w-10 lg:h-10"
+                      className="w-8 h-8 lg:w-10 lg:h-10 animate-rotate-wiggle"
                       fill="currentColor"
                       viewBox="0 0 24 24"
                     >
