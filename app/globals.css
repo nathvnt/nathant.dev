@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
-@import "~slick-carousel/slick/slick.css";
-@import "~slick-carousel/slick/slick-theme.css";
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
 
 @tailwind base;
 @tailwind components;
@@ -26,5 +26,15 @@ body {
 
 /* containers for main-sections/components on home page */
 .section-container {
-  @apply lg:min-h-screen h-auto pt-10 border-b-2 border-black;
+  @apply lg:min-h-screen h-auto py-16 border-b-2 border-black;
+}
+
+.submit-btn {
+ background: #009966;
+ opacity: .7;
+}
+
+.submit-btn:hover {
+  background: linear-gradient(to top, #004f3b, #009966);  
+  opacity: 1;
 }

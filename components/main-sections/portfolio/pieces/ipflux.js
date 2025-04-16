@@ -4,8 +4,8 @@ import { useEffect, useRef, useState } from "react";
 export default function Ipflux() {
 
   return (
-    <div className="w-[90%] mx-auto text-[16px] p-6 rounded-md bg-black bg-opacity-65  border-2 border-emerald-600 ">
-      <div className="w-[90%] mx-auto px-4 pb-4 flex flex-col gap-5">
+    <div className="w-[100%] mx-auto text-[12px] lg:text-[16px] p-2 lg:p-6 rounded-md bg-black bg-opacity-65  border-2 border-emerald-600">
+      <div className="sm:w-[95%] lg:w-[90%] mx-auto px-4 pb-4 flex flex-col gap-5">
         <span>
           ipflux.io is an open source host-based network traffic analyzer tool I started working on in 2024; 
           the current iteration (released April 2025) has a user interface built with Electron that is able to spawn and manage detached
@@ -14,9 +14,18 @@ export default function Ipflux() {
           solution for generating traffic pattern baselines that include over 20 unique statistical metrics.  
         </span>
 
-        <span>Website: <a href="https://ipflux.io/" target="_blank">https://ipflux.io/</a></span>
+        <span className="text-[14px] lg:text-[18px] font-semibold">
+          Website: 
+          <a 
+            href="https://ipflux.io/" 
+            target="_blank"
+            className="underline text-blue-600 font-semibold ml-2"
+          >
+            https://ipflux.io/
+          </a>
+        </span>
 
-        <span>
+        <span className="text-[14px] lg:text-[18px] font-semibold">
           Check out the GitHub page:&nbsp;
           <a
             href="https://github.com/nathvnt/ipfluxio-linux/tree/master"
@@ -25,7 +34,7 @@ export default function Ipflux() {
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="w-[30px] h-[30px]"
+              className="w-5 h-5 sm:w-6 sm:h-6 lg:w-8 lg:h-8"
               fill="currentColor"
               viewBox="0 0 24 24"
             >
@@ -35,7 +44,7 @@ export default function Ipflux() {
         </span>
       </div>
 
-      <div className="w-[90%] mx-auto"> 
+      <div className="w-[95%] mx-auto my-4"> 
         <img src="/ipflux/ipfss2.png" className="rounded-lg shadow-lg mx-auto block"/>
       </div>
     </div>

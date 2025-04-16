@@ -11,7 +11,7 @@ export default function useTurnstile() {
     script.async = true;
     script.onload = () => {
       window.turnstile.render("#turnstile-container", {
-        sitekey: "0x4AAAAAAAzZ2vHpE8ShTDs2",
+        sitekey: process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY,
         callback: async (token) => {
           const res = await fetch("/api/verify-turnstile", {
             method: "POST",

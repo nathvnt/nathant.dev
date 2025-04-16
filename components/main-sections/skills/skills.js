@@ -3,10 +3,12 @@ import React, { useRef, useEffect } from "react";
 import Slider from "react-slick";
 // Icons Import
 //Programming & Scripting Languages Icons
-import { DiJsBadge, DiPython, DiNodejsSmall, DiTerminal, DiMysql } from "react-icons/di";
+import { DiJsBadge, DiPython, DiTerminal } from "react-icons/di";
+import { SiRust, SiTypescript } from "react-icons/si";
 //Frameworks & Libraries Icons
 import { DiAngularSimple, DiReact } from "react-icons/di";
 import { SiVuedotjs, SiFlask, SiTailwindcss } from "react-icons/si";
+import { IoLogoElectron } from "react-icons/io5";
 // DevOps & Cloud Services Icons
 import { SiAmazonwebservices, SiGit, SiDocker, SiKubernetes, SiTerraform } from "react-icons/si";
 // Cyber Security & System Administration Icons
@@ -76,13 +78,13 @@ export default function Skills({ darkMode }) {
     };
 
     return (
-        <div className="text-center mb-20 w-[95%] lg:w-[80%] mx-auto">
+        <div className="text-center w-[95%] lg:w-[80%] mx-auto">
 
             <h2 className="text-2xl lg:text-3xl py-2 mb-10">
                 Technical <span className="text-emerald-600">Skills</span>
             </h2>
 
-            <Slider {...settings} ref={sliderRef} className={styles.customSlider}>
+            <Slider {...settings} ref={sliderRef} className={`${styles.customSlider} my-20 lg:my-0`}>
 
                 {/* Skills card: Programming & Scripting Languages */}
                 <div className={`${styles.skillslideItem} ${darkMode ? 'dark:bg-black dark:bg-opacity-65' : 'bg-slate-300 bg-opacity-15'}`}>
@@ -91,24 +93,24 @@ export default function Skills({ darkMode }) {
                     </h3>
                     <div className={styles.skilliconContainer}>
                         <div className={styles.skilliconWrap}>
-                            <DiJsBadge />
-                            <p>JavaScript</p>
-                        </div>
-                        <div className={styles.skilliconWrap}>
                             <DiPython />
                             <p>Python</p>
                         </div>
                         <div className={styles.skilliconWrap}>
-                            <DiNodejsSmall />
-                            <p>Node.js</p>
+                            <DiJsBadge />
+                            <p>JavaScript</p>
+                        </div>
+                        <div className={styles.skilliconWrap}>
+                            <SiTypescript />
+                            <p>TypeScript</p>
                         </div>
                         <div className={styles.skilliconWrap}>
                             <DiTerminal />
                             <p>Bash</p>
                         </div>
                         <div className={styles.skilliconWrap}>
-                            <DiMysql />
-                            <p>MySQL</p>
+                            <SiRust />
+                            <p>Rust</p>
                         </div>
                     </div>
                 </div>
@@ -120,24 +122,24 @@ export default function Skills({ darkMode }) {
                     </h3>
                     <div className={styles.skilliconContainer}>
                         <div className={styles.skilliconWrap}>
-                            <DiAngularSimple />
-                            <p>Angular</p>
-                        </div>
-                        <div className={styles.skilliconWrap}>
                             <DiReact />
                             <p>React</p>
+                        </div>
+                        <div className={styles.skilliconWrap}>
+                            <DiAngularSimple />
+                            <p>Angular</p>
                         </div>
                         <div className={styles.skilliconWrap}>
                             <SiVuedotjs />
                             <p>Vue.js</p>
                         </div>
                         <div className={styles.skilliconWrap}>
-                            <SiFlask />
-                            <p>Flask</p>
+                            <IoLogoElectron />
+                            <p>Electron</p>
                         </div>
                         <div className={styles.skilliconWrap}>
-                            <SiTailwindcss />
-                            <p>Tailwind CSS</p>
+                            <SiFlask />
+                            <p>Flask</p>
                         </div>
                     </div>
                 </div>
