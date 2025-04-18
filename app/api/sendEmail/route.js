@@ -1,20 +1,20 @@
 import nodemailer from 'nodemailer';
+import axios from 'axios';
 
 export async function POST(req) {
     
     const { name, email, message, captchaValue } = await req.json();
 
     // Verify the reCAPTCHA token with Google
-    const recaptchaResponse = await fetch('https://www.google.com/recaptcha/api/siteverify', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams({
-            secret: process.env.RECAPTCHA_SECRET_KEY, 
-            response: captchaValue
-        })
-    });
-
-    const recaptchaResult = await recaptchaResponse.json();
+    const recaptchaResponse = await axios.post('https://www.google.com/recaptcha/api/siteverify',
+        new URLSearchParams({
+          secret: process.env.RECAPTCHA_SECRET_KEY,
+          response: captchaValue
+        }),
+        { headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, timeout: 5000 }
+      );
+      
+    const recaptchaResult = recaptchaResponse.data;
 
     // Check if the reCAPTCHA verification was successful
     if (!recaptchaResult.success) {
