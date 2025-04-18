@@ -8,7 +8,7 @@ export default function Hw5() {
       <div className="sm:w-[95%] lg:w-[90%] mx-auto px-4 pb-4 flex flex-col gap-5">
         <span>
           This version of housewarmth.com is the current predecessor to nathant.dev (in regards to the evolution of my portfolio websites); 
-          the site was an overall attempt at stepping into a cleaner and more polished design space while still adhering to original sites aesthetics.
+          the site was an overall attempt at stepping into a cleaner and more polished design space while still adhering to the original sites aesthetics.
           HouseWarmth version 5 features a settings menu that lets the user customize the sites color pallete as well as a video gallery of
           some MiniDV tape footage I collected while traveling etc. 
         </span>

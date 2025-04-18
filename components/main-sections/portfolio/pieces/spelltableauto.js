@@ -14,7 +14,7 @@ export default function SpellTableAuto() {
           createGame API. SpellBots service allows online communities a convenient solution for organizing games of webcam Magic and generating 
           multiplayer queues from within their Discord servers. As a frequent user of SpellBot, I did some research into finding 
           an alternative solution for generating game lobbies that does not require special API access; what I came up with was using 
-          a headless browser to create a game lobby via the SpellTable website. This works by capturing the game ID from 
+          an automated headless browser to create a game lobby via the SpellTable website. This works by capturing the game ID from 
           the createGame endpoints resonse, while also blocking page redirect requests that automatically populate the game 
           with an initial player. This results in the ability to generate a working link to an empty lobby. 
           This solution has since been re-written in Playwright and is currently being used by the Discord SpellBot. 

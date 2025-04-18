@@ -7,7 +7,7 @@ export default function Ipflux() {
     <div className="w-[100%] mx-auto text-[12px] lg:text-[16px] p-2 lg:p-6 rounded-md bg-black bg-opacity-65  border-2 border-emerald-600">
       <div className="sm:w-[95%] lg:w-[90%] mx-auto px-4 pb-4 flex flex-col gap-5">
         <span>
-          ipflux.io is an open source host-based network traffic analyzer tool I started working on in 2024; 
+          ipflux.io is an open source host-based network traffic analyzer I started working on in 2024; 
           the current iteration (released April 2025) has a user interface built with Electron that is able to spawn and manage detached
           Python processes which collect and organize network traffic data. These detached processes can be scheduled 
           at a system level to run passively in the background over a long period of time; this creates a light weight 

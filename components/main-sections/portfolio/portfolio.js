@@ -38,7 +38,7 @@ export default function Portfolio() {
         My <span className="text-emerald-600">Portfolio</span>
       </h2>
 
-      <div className="w-full flex flex-col lg:flex-row sm:gap-0 lg:gap-6 sm:p-0 lg:p-8">
+      <div className="w-[95%] mx-auto flex flex-col lg:flex-row sm:gap-0 lg:gap-6 sm:p-0 lg:p-8">
 
         {/* desktop nav menu */}
         <div className="hidden lg:flex flex-col flex-shrink-0 w-[15%] pt-4">
@@ -77,27 +77,30 @@ export default function Portfolio() {
 
         {/* mobile nav menu */}
         <div className="flex flex-col">
-          <div className="flex sm:flex lg:hidden justify-center items-center py-4 w-full">
-            <div className="flex justify-between items-center px-4 w-[95%]">
-              <button
-                onClick={() => sliderRef?.slickPrev()}
-                className="text-emerald-400 font-extrabold text-3xl text-left w-[5%]"
-              >
-                ⦑
-              </button>
+        <div className="flex sm:flex lg:hidden justify-center items-center py-4 px-2 w-full">
+          <div className="flex justify-between items-center  w-[95%] h-[48px] shadow-[0_2px_12px_rgba(0,0,0,0.5)]">
+            <button
+              onClick={() => sliderRef?.slickPrev()}
+              className="bg-black/60 rounded-l-md text-emerald-400 font-extrabold text-3xl w-[8%] flex items-center justify-center h-full"
+            >
+              ⦑
+            </button>
 
-              <span className="text-[18px] font-semibold text-white text-center flex-1 w-[90%]">
+            <div className="bg-black/20 w-[84%] text-center h-[100%] flex items-center justify-center">
+              <span className="text-[18px] font-semibold text-white">
                 {projectNames[currentSlide]}
               </span>
-
-              <button
-                onClick={() => sliderRef?.slickNext()}
-                className="text-emerald-400 font-extrabold text-3xl text-right w-[5%]"
-              >
-                ⦒
-              </button>
             </div>
+
+            <button
+              onClick={() => sliderRef?.slickNext()}
+              className="bg-black/60 rounded-r-md text-emerald-400 font-extrabold text-3xl w-[8%] flex items-center justify-center h-full"
+            >
+              ⦒
+            </button>
           </div>
+        </div>
+
           {/* mobile nav dots */}
           <div className="flex lg:hidden justify-center gap-2 pb-4">
             {projectNames.map((_, index) => (

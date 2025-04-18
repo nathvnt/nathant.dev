@@ -22,7 +22,7 @@ export default function MTGOLinux() {
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              cclassName="w-6 h-6 lg:w-8 lg:h-8"
+              className="w-6 h-6 lg:w-8 lg:h-8"
               fill="currentColor"
               viewBox="0 0 24 24"
             >

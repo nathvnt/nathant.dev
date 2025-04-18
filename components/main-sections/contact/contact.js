@@ -90,7 +90,7 @@ export default function Contact() {
             </h2>
 
             <form onSubmit={handleSubmit}>
-                <div className="w-[90%] lg:w-[40%] flex flex-col mx-auto p-2 my-6 rounded-md bg-black bg-opacity-65 border-2 border-emerald-600 text-black">
+                <div className="w-[90%] lg:w-[40%] flex flex-col mx-auto p-2 my-6 rounded-md bg-black bg-opacity-65 border-2 border-emerald-600 text-black shadow-[0_4px_30px_rgba(0,0,0,0.85)]">
 
                     {/* Name Field */}
                     <label htmlFor="name" className="text-lg text-emerald-600 text-left p-1 ml-[5%] mt-4">

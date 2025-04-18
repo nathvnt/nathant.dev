@@ -93,7 +93,7 @@ export default function Home() {
           <main className="text-white">
 
             {/* ---banner title bar--- */}
-            <div ref={bannerRef} id="banner" className=" bg-emerald-600 bg-opacity-30 py-8 flex justify-between border-b-2 border-black">
+            <div ref={bannerRef} id="banner" className=" bg-emerald-600 bg-opacity-30 py-6 lg:py-8 flex justify-between border-b-2 border-black">
               <h1 className="text-2xl lg:text-3xl px-4 ">nathant.dev</h1>
 
               <ul className="flex items-center px-6">

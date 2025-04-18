@@ -80,11 +80,11 @@ export default function Skills({ darkMode }) {
     return (
         <div className="text-center w-[95%] lg:w-[80%] mx-auto">
 
-            <h2 className="text-2xl lg:text-3xl py-2 mb-10">
+            <h2 className="text-2xl lg:text-3xl py-2 mb-6">
                 Technical <span className="text-emerald-600">Skills</span>
             </h2>
 
-            <Slider {...settings} ref={sliderRef} className={`${styles.customSlider} my-20 lg:my-0`}>
+            <Slider {...settings} ref={sliderRef} className={`${styles.customSlider} my-8 lg:my-0`}>
 
                 {/* Skills card: Programming & Scripting Languages */}
                 <div className={`${styles.skillslideItem} ${darkMode ? 'dark:bg-black dark:bg-opacity-65' : 'bg-slate-300 bg-opacity-15'}`}>

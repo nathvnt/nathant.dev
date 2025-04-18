@@ -1,15 +1,15 @@
 /* styles for skills component */
 
 .skillslideItem {
-  @apply lg:!w-[80%] !w-[100%] !mx-auto flex flex-col py-4 text-white rounded-md border-emerald-600 border-2;
+  @apply lg:!w-[80%] !w-[100%] !mx-auto flex flex-col py-6 px-4 lg:px-12 text-white rounded-md border-emerald-600 border-2;
 }
   
 .skillslideTitle {
-  @apply text-base lg:text-2xl text-center underline decoration-emerald-600 underline-offset-4 mt-1 lg:mt-10;
+  @apply text-base lg:text-2xl text-center underline decoration-emerald-600 underline-offset-4 mt-1 lg:mt-8 pb-4 lg:pb-6;
 }
 
 .skilliconContainer {
-  @apply w-[95%] mx-auto flex flex-wrap gap-4 lg:gap-10 xl:gap-24 justify-center text-3xl lg:text-4xl xl:text-7xl mt-4 mb-2 lg:mt-10 lg:mb-10;
+  @apply w-[95%] mx-auto flex flex-wrap justify-between text-3xl lg:text-4xl xl:text-7xl mt-4 mb-2 lg:mt-8 lg:mb-8;
 }
 
 .skilliconWrap {
@@ -17,7 +17,7 @@
 }
 
 .skilliconWrap p {
-  @apply text-xs lg:text-base mt-2;
+  @apply text-xs lg:text-base my-2;
 }
 
 .customSlider :global(.slick-slide) {

@@ -30,14 +30,24 @@ body {
 }
 
 .submit-btn {
- background: #009966;
- opacity: .7;
-}
-
-.submit-btn:hover {
   background: linear-gradient(to top, #004f3b, #009966);  
   opacity: 1;
 }
+
+@media (min-width: 1024px) {
+  .submit-btn {
+    background: #009966;
+    opacity: .7;
+   }
+   
+   .submit-btn:hover {
+     background: linear-gradient(to top, #004f3b, #009966);  
+     opacity: 1;
+   }
+}
+
+
+
 
 @keyframes rotate-wiggle {
   0% {
