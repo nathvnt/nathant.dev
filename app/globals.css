@@ -29,26 +29,6 @@ body {
   @apply lg:min-h-screen h-auto py-16 border-b-2 border-black;
 }
 
-.submit-btn {
-  background: linear-gradient(to top, #004f3b, #009966);  
-  opacity: 1;
-}
-
-@media (min-width: 1024px) {
-  .submit-btn {
-    background: #009966;
-    opacity: .7;
-   }
-   
-   .submit-btn:hover {
-     background: linear-gradient(to top, #004f3b, #009966);  
-     opacity: 1;
-   }
-}
-
-
-
-
 @keyframes rotate-wiggle {
   0% {
     transform: rotate(0deg);

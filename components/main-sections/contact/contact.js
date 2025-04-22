@@ -8,6 +8,7 @@ export default function Contact() {
     const [captchaValue, setCaptchaValue] = useState(null); 
     const [errors, setErrors] = useState({ name: false, email: false, message: false });
     const [status, setStatus] = useState(''); 
+    const [isSubmitting, setIsSubmitting] = useState(false);
 
     //recapthca site key 
     const SITE_KEY = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
@@ -47,9 +48,13 @@ export default function Contact() {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
+        setStatus('');           
+        setIsSubmitting(true); 
+
         // Verify reCAPTCHA is completed
         if (!captchaValue) {
             setStatus('Please complete the reCAPTCHA.');
+            setIsSubmitting(false);
             return;
         }
 
@@ -80,7 +85,14 @@ export default function Contact() {
         } else {
             setStatus('Please fix the errors before submitting.');
         }
+        setIsSubmitting(false);
     };
+
+    const formIsValid =
+        namePattern.test(name) &&
+        emailPattern.test(email) &&
+        messagePattern.test(message) &&
+        captchaValue !== null;
 
     return (
         <div className="text-center">
@@ -144,8 +156,16 @@ export default function Contact() {
                     />
 
                     {/* Submit Button */}
-                    <button className="w-[50%] mx-auto mb-6 p-2 submit-btn rounded-md text-white hover:font-semibold text-lg border-2 border-black outline-none shadow-md">
-                        Send Message
+                    <button
+                        type="submit"
+                        disabled={!formIsValid || isSubmitting}
+                        className={`w-[50%] mx-auto mb-6 p-2 rounded-md text-white text-lg border-2 border-black outline-none shadow-md ${
+                            !formIsValid || isSubmitting
+                                ? 'bg-gray-500 bg-opacity-60 cursor-not-allowed'
+                                : 'bg-emerald-600 bg-opacity-70 hover:bg-opacity-100 hover:bg-gradient-to-t hover:from-emerald-900 hover:to-emerald-600 hover:font-semibold'
+                        }`}
+                    >
+                        {isSubmitting ? 'Sending...' : 'Send Message'}
                     </button>
 
                     {/* Status message for feedback */}
