@@ -27,7 +27,7 @@ export async function POST(req) {
       return new Response(JSON.stringify({ message: 'reCAPTCHA verification failed' }), { status: 400 });
     }
   } catch (err) {
-    console.error("[API] reCAPTCHA error:", err.message);
+    // console.error("[API] reCAPTCHA error:", err.message);
     return new Response(JSON.stringify({ message: 'reCAPTCHA request error', error: err.message }), { status: 500 });
   }
 
@@ -45,11 +45,11 @@ export async function POST(req) {
       text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
     });
 
-    console.log("[Mailgun SDK] Message sent:", result);
+    // console.log("[Mailgun SDK] Message sent:", result);
     return new Response(JSON.stringify({ message: 'Email sent successfully' }), { status: 200 });
 
   } catch (error) {
-    console.error("[Mailgun SDK] Error:", error.message || error);
+    // console.error("[Mailgun SDK] Error:", error.message || error);
     return new Response(JSON.stringify({ message: 'Email sending failed', error: error.message }), { status: 500 });
   }
 }

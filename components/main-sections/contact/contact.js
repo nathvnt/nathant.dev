@@ -79,7 +79,7 @@ export default function Contact() {
                     setStatus('Failed to send message.');
                 }
             } catch (error) {
-                console.error(error);
+                // console.error(error);
                 setStatus('An error occurred while sending the email.');
             }
         } else {
